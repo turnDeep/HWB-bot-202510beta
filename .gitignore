@@ -1,0 +1,100 @@
+# Environment variables - CRITICAL: Never commit these!
+.env
+.env.local
+.env.*.local
+.env.production
+
+# SQLite Database
+*.db
+*.sqlite
+*.sqlite3
+hwb_cache.db
+hwb_cache.db-journal
+hwb_cache.db-wal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+log/
+
+# Charts and temporary files
+charts/
+*.png
+*.jpg
+*.jpeg
+fvg_charts/
+temp/
+tmp/
+cache/
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Security
+*.pem
+*.key
+*.cert
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Cache directories
+__pycache__/
+.cache/
+*.pyc
+
+# Railway specific
+railway.json
