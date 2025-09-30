@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HanaView</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HanaView</h1>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="dashboard">Dashboard</button>
+                <button class="tab-button" data-tab="hwb200">200MA</button>
+            </div>
+        </header>
+        <main>
+            <div id="dashboard-content" class="tab-pane active">
+                <!-- Existing dashboard content here -->
+                <h2>Dashboard</h2>
+                <p>Welcome to HanaView.</p>
+            </div>
+            <div id="hwb200-content" class="tab-pane">
+                <div class="hwb-controls">
+                    <button id="hwb-scan-btn" class="hwb-action-btn">
+                        📡 スキャン実行
+                    </button>
+                    <button id="hwb-refresh-btn" class="hwb-action-btn">
+                        🔄 データ更新
+                    </button>
+                    <div id="hwb-status" class="hwb-status-info"></div>
+                </div>
+                <div id="hwb-loading" class="loading-container" style="display: none;">
+                    <p>スキャン中...</p>
+                    <div class="loading-spinner"></div>
+                    <div id="hwb-progress"></div>
+                </div>
+                <div id="hwb-content">
+                    <!-- ここにコンテンツが動的に生成される -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
