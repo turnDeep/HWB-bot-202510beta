@@ -1,0 +1,239 @@
+/* HWB 200MAタブスタイル */
+.hwb-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.hwb-action-btn {
+    padding: 10px 20px;
+    background-color: var(--tab-active-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.hwb-action-btn:hover {
+    background-color: #0d8a93;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 107, 107, 0.3);
+}
+
+.hwb-action-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hwb-status-info {
+    flex: 1;
+    text-align: right;
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+/* HWBサマリー */
+.hwb-summary {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.hwb-summary h2 {
+    color: var(--tab-text);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.hwb-summary-section {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid var(--tab-text);
+}
+
+.hwb-summary-section h3 {
+    color: var(--text-primary);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.hwb-ticker-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.hwb-ticker {
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.hwb-ticker:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hwb-ticker.signal {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.hwb-ticker.candidate {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.hwb-ticker.recent {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* HWBチャート */
+.hwb-charts-section {
+    margin-top: 30px;
+}
+
+.hwb-charts-section h2 {
+    color: var(--tab-text);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.hwb-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.hwb-chart-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.3s;
+}
+
+.hwb-chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.hwb-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hwb-chart-symbol {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.hwb-chart-score {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.hwb-chart-score.high {
+    background-color: #28a745;
+    color: white;
+}
+
+.hwb-chart-score.medium {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.hwb-chart-score.low {
+    background-color: #6c757d;
+    color: white;
+}
+
+.hwb-chart-info {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.hwb-chart-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hwb-chart-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* プログレスバー */
+#hwb-progress {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.hwb-progress-bar {
+    background-color: var(--tab-text);
+    height: 100%;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.85em;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hwb-chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwb-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hwb-status-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
